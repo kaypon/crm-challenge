@@ -88,6 +88,13 @@ Visit [http://localhost:8080](http://localhost:8080)
 
 ---
 
+You can run the db_setup.sh script by making it an executable file (skipping the steps above):
+
+```bash
+chmod +x db_setup.sh
+./db_setup.sh
+```
+
 ## 🧭 Routes
 
 | URL                        | Description              |
