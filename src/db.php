@@ -2,7 +2,7 @@
 // Database connection config
 $host = '127.0.0.1';
 $db   = 'crm';
-$user = 'kevin';
+$user = 'user';
 $pass = 'password';
 $charset = 'utf8mb4';
 
