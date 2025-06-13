@@ -25,7 +25,7 @@ Includes CSV import, data validation, loyalty point calculation, and a simple da
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/crm-challenge.git
+git clone https://github.com/kaypon/crm-challenge.git
 cd crm-challenge
 ```
 
@@ -47,8 +47,8 @@ Inside MySQL:
 
 ```sql
 CREATE DATABASE crm;
-CREATE USER 'kevin'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON crm.* TO 'kevin'@'localhost';
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON crm.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 ```
