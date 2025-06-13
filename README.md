@@ -33,8 +33,18 @@ cd crm-challenge
 
 Install PHP & MySQL if not already installed:
 
+Linux
+
 ```bash
 sudo apt install php php-mysql mysql-server
+```
+
+MacOS
+
+```bash
+brew install php
+brew install mysql
+brew services start mysql
 ```
 
 ### 3. Create the database
