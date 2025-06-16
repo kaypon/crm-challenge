@@ -1,3 +1,7 @@
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/db.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,5 +32,7 @@
     <h1>📂 CRM Portal</h1>
     <a href="dashboard.php">📊 View Dashboard</a>
     <a href="report.php">📈 View Monthly Report</a>
+    <a href="report_avg_order_trend.php">📊 Avg Order Trend</a>
+
 </body>
 </html>
