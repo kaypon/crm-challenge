@@ -6,3 +6,5 @@ vendor/
 node_modules/
 .env
 reset_db.sh
+# ignore vendor dir and env files
+vendor/
