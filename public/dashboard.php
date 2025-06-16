@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/../src/db.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/db.php';
 
 // fetch all customers, sorted by loyalty
 $stmt = $pdo->query("SELECT * FROM customers ORDER BY loyalty_points DESC");

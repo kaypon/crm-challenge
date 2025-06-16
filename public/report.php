@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/../src/db.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/db.php';
 
 // group purchases by month, calculate avg spend + total points
 $stmt = $pdo->query("

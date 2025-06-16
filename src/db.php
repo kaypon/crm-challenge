@@ -1,23 +1,25 @@
 <?php
-// Database connection config
-$host = '127.0.0.1';
-$db   = 'crm';
-$user = 'user';
-$pass = 'password';
-$charset = 'utf8mb4';
+declare(strict_types=1);
 
-// Set up DSN and PDO options
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-];
+require __DIR__ . '/../vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+$host = getenv('DB_HOST');
+$db   = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$dsn  = "mysql:host={$host};dbname={$db};charset=utf8mb4";
 
 try {
-    // Create PDO connection
-    $pdo = new PDO($dsn, $user, $pass, $options);
+    $pdo = new PDO($dsn, $user, $pass, [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ]);
 } catch (PDOException $e) {
-    // Kill script if DB connection fails
-    echo "❌ DB Error: " . $e->getMessage();
-    exit;
+    error_log('DB Connection Error: ' . $e->getMessage());
+    die('Database connection failed.');
 }
